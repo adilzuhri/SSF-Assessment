@@ -10,6 +10,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.stereotype.Repository;
 
+import jakarta.json.JsonValue;
+
 @Repository
 public class NewsRepo {
     
@@ -34,5 +36,17 @@ public class NewsRepo {
     }
 
     public static void save(String news, Object payload) {
+    }
+
+    public Object toJson() {
+        return null;
+    }
+
+    public static JsonValue getNewsPublishedOn() {
+        return null;
+    }
+
+    public static JsonValue getNewsTitle() {
+        return null;
     }
 }
