@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest News!</title>
+<!--     <style>
+        p{text-align: center;}
+    </style> -->
+</head>
+<body>
+    <div>
+        <h1 align="center">Crypto News of the Day</h1>
+        <form method="POST" action="/Articles">
+                <input type="submit" value="Save" style="float: right;"/>
+        </form>
+    </div>
+<form method="GET" action="/Articles">
+    <div class="Articles" data-th-each="n: ${Articles}">
+        <table>
+            <tr>
+                <span data-th-text="${n.ImageUrl}"></span>
+                <br>
+                <span data-th-text="${n.newsId}"></span>            
+                <br>
+                <strong data-th-text="${n.newsTitle}"></strong>
+                <br>
+                <span data-th-text="${n.newsBody}"></span>
+                <br>
+                <span data-th-text="${n.newsCategories}"></span>
+                <span data-th-text="${n.newsTags}"></span>
+                <br>
+                <span data-th-text="${n.newsPublishedOn}"></span>
+                <span data-th-text="${n.newsUrl}"></span>
+                <input type="checkbox" value="Save">
+            </tr>
+        </table>
+    </div>
+</form>
+</body>
+</html>
